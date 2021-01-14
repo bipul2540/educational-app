@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+.createAccount {
+  width: 100%;
+  height: 100vh;
+
+  .main__container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 3px 55px 0px grey;
+    border-radius: 4px;
+
+    .left__panel {
+      flex: 0.4;
+      display: flex;
+      flex-direction: column;
+      //   justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #667db6;
+
+      .left__image {
+        img {
+          width: 100px;
+          object-fit: contain;
+          border-radius: 50%;
+          margin-top: 20vh;
+        }
+      }
+
+      .left__content {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        // margin: auto;
+
+        .logo {
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          h1 {
+            font-size: 20px;
+            font-weight: 400;
+          }
+
+          img {
+            width: 25px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    .right__panel {
+      flex: 0.6;
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+      align-items: center;
+
+      .company__name {
+        margin-top: 8vh;
+        h1 {
+          font-size: 44px;
+          background: linear-gradient(to right, #0082c8, #667db6);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .company__details {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: smaller;
+          width: 130px;
+          text-align: center;
+          font-family: "Lobster", cursive;
+        }
+      }
+
+      .create__account {
+        margin-top: 6vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form {
+          width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          input {
+            width: 70%;
+            padding: 10px 30px;
+            margin: 10px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid grey;
+            font-size: 15px;
+          }
+
+          button {
+            width: 150px;
+            padding: 8px;
+            background-color: #0082c8;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            color: white;
+            font-size: 15px;
+            text-transform: capitalize;
+
+            :active{
+                
+            }
+          }
+        }
+      }
+    }
+  }
+}
