@@ -12,6 +12,16 @@
     border-radius: 4px;
     animation: fading-main-container 1.5s ease;
 
+    .back__bubble {
+      position: absolute;
+      top: -10px;
+      left: 80px;
+      opacity: 0.3;
+      z-index: -1;
+      width: 80%;
+      margin: auto;
+    }
+
     .left__panel {
       flex: 0.4;
       display: flex;
@@ -20,6 +30,7 @@
       align-items: center;
       text-align: center;
       background-color: #667db6;
+      color: white;
 
       .left__image {
         img {
@@ -36,6 +47,11 @@
         flex-direction: column;
         width: 70%;
         // margin: auto;
+
+        h2 {
+          font-family: "Lobster", cursive;
+          font-weight: 200;
+        }
 
         .logo {
           margin-top: 30px;
@@ -71,7 +87,7 @@
         }
         h1 {
           font-size: 44px;
-          background: linear-gradient(to right, #0082c8, #667db6);
+          background: linear-gradient(to right, #0082c8, #4e6ab1);
           background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -111,7 +127,7 @@
           input {
             width: 70%;
             padding: 10px 20px;
-            margin: 10px;
+            margin: 8px 10px;
             border-radius: 10px;
             outline: none;
             border: 1px solid grey;
@@ -121,7 +137,7 @@
           button {
             width: 130px;
             padding: 8px;
-            background-color: #0082c8;
+            background-color: #4e6ab1;
             border: none;
             outline: none;
             border-radius: 3px;

@@ -1,7 +1,8 @@
 import React from "react";
-import image1 from "./../images/power.png";
+import image1 from "./../images/icon.svg";
 import "./../style/CreateAccount.css";
 import { Link } from "react-router-dom";
+import image from "./../images/image1.svg";
 
 function CreateAccount() {
   return (
@@ -56,6 +57,7 @@ function CreateAccount() {
             </form>
           </div>
         </div>
+        <img className="back__bubble" src={image} alt="" />
       </div>
     </div>
   );

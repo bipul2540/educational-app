@@ -3,8 +3,12 @@ import "./../style/Login.css";
 
 function Login() {
   return (
-    <div>
-      <h1>helll user</h1>
+    <div className="login">
+      <div className="main__container">
+      <div className="left__panel">
+      div.
+      </div>
+      </div>
     </div>
   );
 }

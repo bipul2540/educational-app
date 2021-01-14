@@ -1,0 +1,13 @@
+GET http://localhost:5000/api/v1/get/data
+
+# POST  http://localhost:5000/api/v1/post/data
+# Content-Type: application/json
+
+# {
+#     "profession": "content writeer",
+#     "fName": "ankit",
+#     "lName": "jha",
+#     "email": "ankitjha123@gmail.com",
+#     "phone" : 66577687,
+#     "password": "bipul334"
+# }

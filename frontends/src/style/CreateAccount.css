@@ -20,6 +20,16 @@
           animation: fading-main-container 1.5s ease;
 }
 
+.createAccount .main__container .back__bubble {
+  position: absolute;
+  top: -10px;
+  left: 80px;
+  opacity: 0.3;
+  z-index: -1;
+  width: 80%;
+  margin: auto;
+}
+
 .createAccount .main__container .left__panel {
   -webkit-box-flex: 0.4;
       -ms-flex: 0.4;
@@ -36,6 +46,7 @@
           align-items: center;
   text-align: center;
   background-color: #667db6;
+  color: white;
 }
 
 .createAccount .main__container .left__panel .left__image img {
@@ -56,6 +67,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 70%;
+}
+
+.createAccount .main__container .left__panel .left__content h2 {
+  font-family: "Lobster", cursive;
+  font-weight: 200;
 }
 
 .createAccount .main__container .left__panel .left__content .logo {
@@ -113,8 +129,8 @@
 
 .createAccount .main__container .right__panel .company__name h1 {
   font-size: 44px;
-  background: -webkit-gradient(linear, left top, right top, from(#0082c8), to(#667db6));
-  background: linear-gradient(to right, #0082c8, #667db6);
+  background: -webkit-gradient(linear, left top, right top, from(#0082c8), to(#4e6ab1));
+  background: linear-gradient(to right, #0082c8, #4e6ab1);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -181,7 +197,7 @@
 .createAccount .main__container .right__panel .create__account form input {
   width: 70%;
   padding: 10px 20px;
-  margin: 10px;
+  margin: 8px 10px;
   border-radius: 10px;
   outline: none;
   border: 1px solid grey;
@@ -191,7 +207,7 @@
 .createAccount .main__container .right__panel .create__account form button {
   width: 130px;
   padding: 8px;
-  background-color: #0082c8;
+  background-color: #4e6ab1;
   border: none;
   outline: none;
   border-radius: 3px;
