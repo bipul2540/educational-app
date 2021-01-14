@@ -16,6 +16,8 @@
   -webkit-box-shadow: 0px 3px 55px 0px grey;
           box-shadow: 0px 3px 55px 0px grey;
   border-radius: 4px;
+  -webkit-animation: fading-main-container 1.5s ease;
+          animation: fading-main-container 1.5s ease;
 }
 
 .createAccount .main__container .left__panel {
@@ -72,6 +74,8 @@
 .createAccount .main__container .left__panel .left__content .logo h1 {
   font-size: 20px;
   font-weight: 400;
+  color: #ccc7c7;
+  margin-left: 5px;
 }
 
 .createAccount .main__container .left__panel .left__content .logo img {
@@ -99,6 +103,12 @@
 
 .createAccount .main__container .right__panel .company__name {
   margin-top: 8vh;
+}
+
+@media screen and (max-width: 668px) {
+  .createAccount .main__container .right__panel .company__name {
+    margin-top: 4vh;
+  }
 }
 
 .createAccount .main__container .right__panel .company__name h1 {
@@ -170,7 +180,7 @@
 
 .createAccount .main__container .right__panel .create__account form input {
   width: 70%;
-  padding: 10px 30px;
+  padding: 10px 20px;
   margin: 10px;
   border-radius: 10px;
   outline: none;
@@ -179,7 +189,7 @@
 }
 
 .createAccount .main__container .right__panel .create__account form button {
-  width: 150px;
+  width: 130px;
   padding: 8px;
   background-color: #0082c8;
   border: none;
@@ -188,5 +198,67 @@
   color: white;
   font-size: 15px;
   text-transform: capitalize;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.createAccount .main__container .right__panel .create__account form button:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.createAccount .main__container .right__panel .create__account form p {
+  margin-top: 5px;
+}
+
+.createAccount .main__container .right__panel .create__account form p span {
+  cursor: pointer;
+  border-bottom-width: 10px;
+  border-bottom: 1px solid grey;
+}
+
+.createAccount .main__container .right__panel .create__account form p span a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: black;
+}
+
+.createAccount .main__container .right__panel .create__account form p span a:active {
+  color: #3e3e98;
+}
+
+@-webkit-keyframes fading-main-container {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fading-main-container {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .createAccount .main__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 /*# sourceMappingURL=CreateAccount.css.map */

@@ -1,6 +1,7 @@
 import React from "react";
 import image1 from "./../images/power.png";
 import "./../style/CreateAccount.css";
+import { Link } from "react-router-dom";
 
 function CreateAccount() {
   return (
@@ -43,7 +44,15 @@ function CreateAccount() {
               <input type="email" placeholder="E-main Address" />
               <input type="text" placeholder="Phone Number" />
               <input type="password" placeholder="Password 8+ character" />
-              <button type="submit">Create Account</button>
+              <button className="signUp__button" type="submit">
+                Create Account
+              </button>
+              <p>
+                Already have an account ?
+                <span>
+                  <Link to="/login">click here</Link>
+                </span>
+              </p>
             </form>
           </div>
         </div>
