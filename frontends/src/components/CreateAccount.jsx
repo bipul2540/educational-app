@@ -148,7 +148,7 @@ function CreateAccount() {
         </div>
         <img className="back__bubble" src={image} alt="" />
       </div>
-      {!account ? <Greet /> : ""}
+      {account ? <Greet /> : ""}
     </div>
   );
 }
