@@ -5,10 +5,10 @@ const UserSchema = mongoose.Schema({
   profession: {
     type: String,
   },
-  fName: {
+  fname: {
     type: String,
   },
-  lName: {
+  lname: {
     type: String,
   },
   email: {
