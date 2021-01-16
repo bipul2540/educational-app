@@ -4,32 +4,39 @@ import "./../style/CreateAccount.css";
 import { Link } from "react-router-dom";
 import image from "./../images/image1.svg";
 import axios from "./../axios";
+import Greet from "./Greet";
 
 function CreateAccount() {
-  const [items, setItems] = useState([]);
+  // const [items, setItems] = useState([]);
+  const [account, setAccont] = useState(false);
   const [text, setText] = useState({
     profession: "",
     fname: "",
     lname: "",
     email: "",
-    phone: "",
+    number: "",
     password: "",
   });
   useEffect(() => {
-    fetchApi();
+    // fetchApi();
   }, []);
 
-  const fetchApi = async () => {
-    const response = await axios.get("/api/v1/get/data");
-    const data = response.data;
-    console.log(data);
-    setItems(data);
-  };
+  // const fetchApi = async () => {
+  //   const response = await axios.get("/api/v1/new/register");
+  //   const data = response.data;
+  //   console.log(data);
+  //   setItems(data);
+  // };
 
   const postApi = async (text) => {
-    const response = await axios.post("/api/v1/post/data", text);
-    const data = response.data;
-    console.log("data haas been sended to servef", data);
+    try {
+      const response = await axios.post("/api/v1/new/register", text);
+      if (response) setAccont(!account);
+      const data = response.data;
+      console.log("data haas been sended to server", data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleChange = (e) => {
@@ -39,9 +46,17 @@ function CreateAccount() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(text);
     postApi(text);
+    setText({
+      profession: "",
+      email: "",
+      lname: "",
+      fname: "",
+      number: "",
+      password: "",
+    });
   };
+  console.log("you account data", account);
 
   return (
     <div className="createAccount">
@@ -106,10 +121,10 @@ function CreateAccount() {
                 onChange={handleChange}
               />
               <input
-                name="phone"
+                name="number"
                 type="text"
                 placeholder="Phone Number"
-                value={text.phone}
+                value={text.number}
                 onChange={handleChange}
               />
               <input
@@ -133,6 +148,7 @@ function CreateAccount() {
         </div>
         <img className="back__bubble" src={image} alt="" />
       </div>
+      {!account ? <Greet /> : ""}
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import "./../style/Login.css";
 import { Link } from "react-router-dom";
-import { GitHub } from "@material-ui/icons";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";

@@ -8,7 +8,7 @@ router.post("/register", async (req, res) => {
   const validations = registerValidation(data);
 
   if (validations.error)
-    return res.status(500).send(validations.error.details[0].message);
+    return res.status(400).send(validations.error.details[0].message);
 
   // hashing js
   const salt = await bcrypt.genSalt(10);
@@ -21,6 +21,15 @@ router.post("/register", async (req, res) => {
     res.status(200).send({ user: user._id });
   } catch (error) {
     res.status(500).send(error);
+  }
+});
+
+router.get("/users/get", async (req, res) => {
+  try {
+    const user = await User.find().select({ fname: 1 });
+    res.status(400).send(user);
+  } catch (error) {
+    res.status(400).send(error);
   }
 });
 
