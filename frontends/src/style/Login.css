@@ -1,1 +1,254 @@
-/* No CSS *//*# sourceMappingURL=Login.css.map */
+.login .main__container {
+  width: 90%;
+  margin: auto;
+  min-height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 3px 55px 0px grey;
+          box-shadow: 0px 3px 55px 0px grey;
+  -webkit-animation: fading-main-container 1.5s ease;
+          animation: fading-main-container 1.5s ease;
+}
+
+@media screen and (max-width: 668px) {
+  .login .main__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.login .main__container .bubble__image {
+  position: absolute;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+  right: 10%;
+}
+
+.left__panel__login {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+  background-color: #667db6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 370px;
+}
+
+.left__panel__login h1 {
+  margin-top: 20vh;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 668px) {
+  .left__panel__login h1 {
+    margin-top: 7vh;
+    font-size: 1.2rem;
+  }
+}
+
+.left__panel__login p {
+  text-align: center;
+  width: 60%;
+  margin-top: 20px;
+}
+
+.left__panel__login .createAccount {
+  width: 80px;
+  height: 30px;
+  margin-top: 130px;
+  padding: 5px 4px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: rgba(30, 30, 96, 0.87);
+  border: 1px solid grey;
+  border-radius: 4px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.left__panel__login .createAccount:active {
+  -webkit-transform: scale(0.94);
+          transform: scale(0.94);
+}
+
+.left__panel__login .image {
+  margin-top: 60px;
+  position: relative;
+  right: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid red;
+}
+
+.left__panel__login .image .circle__img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.left__panel__login .image .one {
+  left: 20px;
+}
+
+.left__panel__login .image .two {
+  right: 30px;
+}
+
+.left__panel__login .image .three {
+  top: 30px;
+}
+
+.left__panel__login .image .four {
+  left: 65px;
+}
+
+.left__panel__login .image .five {
+  top: 30px;
+  left: 20px;
+}
+
+.right__panel__login {
+  -webkit-box-flex: 0.55;
+      -ms-flex: 0.55;
+          flex: 0.55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right__panel__login h3 {
+  margin-top: 18vh;
+  font-size: 18px;
+  color: black;
+}
+
+@media screen and (max-width: 668px) {
+  .right__panel__login h3 {
+    margin-top: 8vh;
+  }
+}
+
+.right__panel__login h3 span {
+  background: -webkit-gradient(linear, left top, right top, from(#0082c8), to(#4e6ab1));
+  background: linear-gradient(to right, #0082c8, #4e6ab1);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 5px;
+  font-size: 30px;
+}
+
+.right__panel__login .form__container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.right__panel__login .form__container form {
+  width: 50%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right__panel__login .form__container form input {
+  width: 100%;
+  border: 1px solid grey;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.right__panel__login .form__container form .form__btn {
+  width: 100px;
+  border: none;
+  background-color: #4e6ab1;
+  outline: none;
+  margin-top: 20px;
+  padding: 0.5rem 0.4rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+  -webkit-transition: all ease 0.6s;
+  transition: all ease 0.6s;
+}
+
+.right__panel__login .form__container form .form__btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.signin__option {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: #667db6;
+}
+
+.signin__option .signin__icon {
+  cursor: pointer;
+  border: 1px solid #8694b6;
+  padding: 2px;
+  border-radius: 50%;
+  margin: 2px 8px;
+}
+
+.signin__option .signin__icon:hover {
+  background-color: rgba(22, 22, 22, 0.231);
+}
+/*# sourceMappingURL=Login.css.map */
