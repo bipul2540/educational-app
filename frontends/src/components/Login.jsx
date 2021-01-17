@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./../style/Login.css";
 import { Link, Redirect } from "react-router-dom";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -14,20 +14,43 @@ import image11 from "./../images/image11.jpg";
 import image12 from "./../images/image12.jpg";
 import axios from "./../axios";
 
-function Login({ access, setAccess }) {
+function Login({ authenticated, setAuthenticated }) {
   const [text, setText] = useState({
     email: "",
     password: "",
   });
 
+  useEffect(() => {
+    // fetchApi();
+    storeCollector();
+    console.log("I AM FROM useEffect");
+  }, []);
+  const storeCollector = () => {
+    const store = JSON.parse(localStorage.getItem("login"));
+    if (store && store.authenticated && store.token) {
+      setAuthenticated(store.authenticated);
+      console.log("authe from store", authenticated);
+    }
+  };
   const fetchApi = async (text) => {
+    console.log("fetch run");
     try {
       const response = await axios.post("/api/v1/new/user/login", text);
-      const data = await response.data;
-      if (data) {
-        setAccess(!access);
+      const result = await response.data;
+      console.log(result);
+      if (!result) {
+        setAuthenticated(false);
+        console.log("authe from fetch", authenticated);
       }
-      console.log("DATA IS :-", data);
+
+      localStorage.setItem(
+        "login",
+        JSON.stringify({
+          token: result.token,
+          authenticated: true,
+        })
+      );
+      storeCollector();
     } catch (error) {
       console.log(error);
     }
@@ -40,7 +63,7 @@ function Login({ access, setAccess }) {
 
   const loginHandler = (e) => {
     e.preventDefault();
-    console.log(text);
+    console.log("TEXT", text);
     fetchApi(text);
     setText({
       email: "",
@@ -48,7 +71,7 @@ function Login({ access, setAccess }) {
     });
   };
 
-  if (!access) {
+  if (authenticated === false) {
     return (
       <div className="login">
         <div className="main__container">

@@ -6,19 +6,25 @@ import Home from "./Home";
 import User from "./Homepage";
 
 function App() {
-  const [access, setAccess] = useState(false);
-  console.log(access);
+  const [authenticated, setAuthenticated] = useState(false);
+  console.log(" authe from app", authenticated);
   return (
     <div>
       <Switch>
-        <Route path="/" exact component={Home} />
+        {!authenticated ? <Route path="/" exact component={Home} /> : ""}
+
         <Route path="/createaccount" exact component={CreateAccount} />
         <Route
           path="/login"
           exact
-          component={() => <Login access={access} setAccess={setAccess} />}
+          component={() => (
+            <Login
+              authenticated={authenticated}
+              setAuthenticated={setAuthenticated}
+            />
+          )}
         />
-        {access ? (
+        {authenticated ? (
           <Route path="/website" exact component={User} />
         ) : (
           <Redirect to="/login" />

@@ -11,10 +11,10 @@ function Home() {
           <nav>
             <ul className="nav__links">
               <li>
-                <Link>About us</Link>
+                <Link to="#">About us</Link>
               </li>
               <li>
-                <Link>Contact us</Link>
+                <Link to="#">Contact us</Link>
               </li>
             </ul>
           </nav>
