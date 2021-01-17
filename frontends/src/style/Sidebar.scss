@@ -1,0 +1,115 @@
+.sidebar {
+  position: fixed;
+  min-width: 350px;
+  top: 8vh;
+  height: 92vh;
+  z-index: 1;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 80px;
+    background: transparent; /* Optional: just make scrollbar invisible */
+    cursor: pointer;
+  }
+  /* Optional: show position indicator in red */
+  &::-webkit-scrollbar-thumb {
+    background: #e2e2e2;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: #989898;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .sidebar__container {
+    width: 93%;
+    margin: auto;
+    margin-top: 4vh;
+  }
+}
+
+.sidebar__links {
+  list-style-type: none;
+  margin-top: 10px;
+}
+.user__bar,
+.sidebar__link {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  cursor: pointer;
+}
+.user__bar {
+  .content__title {
+    margin-left: 10px;
+  }
+}
+
+.sidebar__links {
+  .anchor__link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+  li {
+    padding: 0.8rem 1rem 0.8rem 0.4rem;
+    border-radius: 10px;
+    cursor: pointer;
+    .content__icon {
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    .content__title {
+      margin-left: 15px;
+    }
+
+    &:hover {
+      background-color: #ebebeb;
+      .anchor__link {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+  margin-left: 10px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+
+  .burger__button {
+    background-color: #e4e6eb;
+    width: 40px;
+    height: 40px;
+
+    @media screen and (max-width: 500px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      background-color: rgb(228, 228, 228);
+    }
+    i {
+      font-size: 1.3rem;
+      color: #667db6;
+      @media screen and (max-width: 500px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

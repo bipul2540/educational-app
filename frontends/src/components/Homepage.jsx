@@ -1,9 +1,13 @@
 import React from "react";
+import Navbar from "./homepageComponents/Navbar";
+import "./../style/Homepage.css";
+import Sidebar from "./homepageComponents/Sidebar";
 
 function Homepage() {
   return (
-    <div>
-      <h1>welcome to our website thank you</h1>
+    <div className="homepage">
+      <Navbar />
+      <Sidebar />
     </div>
   );
 }

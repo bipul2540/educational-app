@@ -1,0 +1,136 @@
+.sidebar {
+  position: fixed;
+  min-width: 350px;
+  top: 8vh;
+  height: 92vh;
+  z-index: 1;
+  overflow-y: scroll;
+  /* Optional: show position indicator in red */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 80px;
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+  cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #989898;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  height: 20px;
+  cursor: pointer;
+}
+
+.sidebar .sidebar__container {
+  width: 93%;
+  margin: auto;
+  margin-top: 4vh;
+}
+
+.sidebar__links {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.user__bar,
+.sidebar__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.user__bar .content__title {
+  margin-left: 10px;
+}
+
+.sidebar__links .anchor__link {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar__links li {
+  padding: 0.8rem 1rem 0.8rem 0.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar__links li .content__icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.sidebar__links li .content__title {
+  margin-left: 15px;
+}
+
+.sidebar__links li:hover {
+  background-color: #ebebeb;
+}
+
+.sidebar__links li:hover .anchor__link {
+  text-decoration: none;
+  color: black;
+}
+
+.burger {
+  display: none;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.burger .burger__button {
+  background-color: #e4e6eb;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .burger .burger__button {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.burger .burger__button:hover {
+  background-color: #e4e4e4;
+}
+
+.burger .burger__button i {
+  font-size: 1.3rem;
+  color: #667db6;
+}
+
+@media screen and (max-width: 500px) {
+  .burger .burger__button i {
+    font-size: 1.1rem;
+  }
+}
+/*# sourceMappingURL=Sidebar.css.map */

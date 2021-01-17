@@ -1,0 +1,123 @@
+.navbar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  min-height: 8vh;
+  background-color: white;
+  -webkit-box-shadow: 2px 3px 15px -8px grey;
+          box-shadow: 2px 3px 15px -8px grey;
+}
+
+.navbar .navbar__container {
+  width: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__left__panel {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__left__panel .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__left__panel .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.nav__left__panel .search__bar {
+  width: 80%;
+}
+
+.nav__left__panel .search__bar form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 88%;
+  min-width: 140px;
+  border: 1px solid #ebe9e9;
+  border-radius: 20px;
+  height: 2rem;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: #f0f2f5;
+}
+
+.nav__left__panel .search__bar form input {
+  width: 80%;
+  outline: none;
+  border: none;
+  padding: 4px 10px;
+  background: transparent;
+  font-weight: 100;
+  font-size: 0.9rem;
+  color: #797575;
+}
+
+.nav__left__panel .search__bar form .search__button {
+  margin-left: 5px;
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.nav__left__panel .search__bar form .search__button .search__icon {
+  color: #787777;
+}
+
+.nav__right__panel .rihgt__icon__buttton {
+  background-color: #e4e6eb;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav__right__panel .rihgt__icon__buttton {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.nav__right__panel .rihgt__icon__buttton .nav__icon {
+  color: #667db6;
+}
+
+@media screen and (max-width: 500px) {
+  .nav__right__panel .rihgt__icon__buttton .nav__icon {
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */
