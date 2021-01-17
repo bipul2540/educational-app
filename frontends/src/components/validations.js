@@ -1,5 +1,6 @@
 const createValidations = (value) => {
   const errors = {};
+
   if (!value.profession) {
     errors.profession = "*field required";
   } else if (value.profession.length < 2) {
