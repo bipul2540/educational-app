@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import image from "./../images/image1.svg";
 import axios from "./../axios";
 import Greet from "./Greet";
+import createValidations from "./validations";
 
 function CreateAccount() {
-  // const [items, setItems] = useState([]);
   const [account, setAccont] = useState(false);
+  const [errors, setErrors] = useState({});
   const [text, setText] = useState({
     profession: "",
     fname: "",
@@ -17,16 +18,7 @@ function CreateAccount() {
     number: "",
     password: "",
   });
-  useEffect(() => {
-    // fetchApi();
-  }, []);
-
-  // const fetchApi = async () => {
-  //   const response = await axios.get("/api/v1/new/register");
-  //   const data = response.data;
-  //   console.log(data);
-  //   setItems(data);
-  // };
+  useEffect(() => {}, []);
 
   const postApi = async (text) => {
     try {
@@ -46,6 +38,19 @@ function CreateAccount() {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    const validations = createValidations(text);
+    console.log(validations.errors.fname);
+    if (
+      validations.errors.fname ||
+      validations.errors.lname ||
+      validations.errors.profession ||
+      validations.errors.number ||
+      validations.errors.email ||
+      validations.errors.password
+    )
+      return setErrors(validations.errors);
+
     postApi(text);
     setText({
       profession: "",
@@ -92,6 +97,11 @@ function CreateAccount() {
           </div>
           <div className="create__account">
             <form action="#" onSubmit={submitHandler}>
+              {errors.profession ? (
+                <p className="error__field">{errors.profession}</p>
+              ) : (
+                " "
+              )}
               <input
                 name="profession"
                 type="text"
@@ -99,6 +109,12 @@ function CreateAccount() {
                 value={text.profession}
                 onChange={handleChange}
               />
+              {errors.fname ? (
+                <p className="error__field">{errors.fname}</p>
+              ) : (
+                " "
+              )}
+
               <input
                 name="fname"
                 type="text"
@@ -106,6 +122,12 @@ function CreateAccount() {
                 value={text.fname}
                 onChange={handleChange}
               />
+
+              {errors.lname ? (
+                <p className="error__field">{errors.lname}</p>
+              ) : (
+                " "
+              )}
               <input
                 name="lname"
                 type="text"
@@ -113,6 +135,12 @@ function CreateAccount() {
                 value={text.lname}
                 onChange={handleChange}
               />
+
+              {errors.email ? (
+                <p className="error__field">{errors.email}</p>
+              ) : (
+                " "
+              )}
               <input
                 name="email"
                 type="email"
@@ -120,6 +148,12 @@ function CreateAccount() {
                 value={text.email}
                 onChange={handleChange}
               />
+
+              {errors.number ? (
+                <p className="error__field">{errors.number}</p>
+              ) : (
+                " "
+              )}
               <input
                 name="number"
                 type="text"
@@ -127,6 +161,12 @@ function CreateAccount() {
                 value={text.number}
                 onChange={handleChange}
               />
+
+              {errors.password ? (
+                <p className="error__field">{errors.password}</p>
+              ) : (
+                " "
+              )}
               <input
                 name="password"
                 type="password"
@@ -134,6 +174,7 @@ function CreateAccount() {
                 value={text.password}
                 onChange={handleChange}
               />
+
               <button className="signUp__button" type="submit">
                 Create Account
               </button>

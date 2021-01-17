@@ -18,7 +18,7 @@
   border-radius: 4px;
   -webkit-animation: fading-main-container 1.5s ease;
           animation: fading-main-container 1.5s ease;
-  min-height: 700px;
+  min-height: 710px;
 }
 
 .createAccount .main__container .back__bubble {
@@ -165,7 +165,7 @@
 }
 
 .createAccount .main__container .right__panel .create__account {
-  margin-top: 6vh;
+  margin-top: 2vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,7 +198,8 @@
 .createAccount .main__container .right__panel .create__account form input {
   width: 70%;
   padding: 10px 20px;
-  margin: 8px 10px;
+  margin: 8px 6px;
+  margin-bottom: 2px;
   border-radius: 10px;
   outline: none;
   border: 1px solid grey;
@@ -213,6 +214,7 @@
   outline: none;
   border-radius: 3px;
   color: white;
+  margin-top: 10px;
   font-size: 15px;
   text-transform: capitalize;
   -webkit-transition: all ease 0.5s;
@@ -277,5 +279,13 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+}
+
+.error__field {
+  color: red;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: -10px;
+  width: 75%;
 }
 /*# sourceMappingURL=CreateAccount.css.map */
