@@ -3,9 +3,9 @@ import "./../../style/Sidebar.css";
 import { Avatar, IconButton, Link } from "@material-ui/core";
 import items from "./sidebarItems";
 
-function Sidebar() {
+function Sidebar({ isActiveBurger }) {
   return (
-    <div className="sidebar">
+    <div className={isActiveBurger ? "sidebar sidebar__active" : "sidebar"}>
       <div className="sidebar__container">
         <div className="user__bar">
           <div className="content__icon">

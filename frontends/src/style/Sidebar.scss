@@ -6,6 +6,10 @@
   z-index: 1;
   overflow-y: scroll;
 
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
   &::-webkit-scrollbar {
     width: 5px;
     height: 80px;
@@ -112,4 +116,12 @@
       }
     }
   }
+  .button__active {
+    background: rgb(186, 186, 186);
+  }
+}
+
+.sidebar__active {
+  width: 100%;
+  display: block;
 }

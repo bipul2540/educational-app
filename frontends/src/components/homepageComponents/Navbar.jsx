@@ -8,7 +8,11 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import MenuIcon from "@material-ui/icons/Menu";
 import "./../../style/Navbar.css";
 
-function Navbar() {
+function Navbar({ isActiveBurger, setActiveBurger }) {
+  const burgerHandler = () => {
+    setActiveBurger(!isActiveBurger);
+  };
+
   return (
     <div className="navbar">
       <div className="navbar__container">
@@ -28,7 +32,14 @@ function Navbar() {
             </form>
           </div>
           <div className="burger">
-            <IconButton className="burger__button">
+            <IconButton
+              className={
+                isActiveBurger
+                  ? "burger__button button__active"
+                  : "burger__button"
+              }
+              onClick={burgerHandler}
+            >
               <i className="fas fa-bars"></i>
             </IconButton>
           </div>

@@ -8,6 +8,12 @@
   /* Optional: show position indicator in red */
 }
 
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
 .sidebar::-webkit-scrollbar {
   width: 5px;
   height: 80px;
@@ -132,5 +138,14 @@
   .burger .burger__button i {
     font-size: 1.1rem;
   }
+}
+
+.burger .button__active {
+  background: #bababa;
+}
+
+.sidebar__active {
+  width: 100%;
+  display: block;
 }
 /*# sourceMappingURL=Sidebar.css.map */
