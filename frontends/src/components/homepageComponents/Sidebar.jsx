@@ -1,6 +1,6 @@
 import React from "react";
 import "./../../style/Sidebar.css";
-import { Avatar, IconButton, Link } from "@material-ui/core";
+import { Avatar, Link } from "@material-ui/core";
 import items from "./sidebarItems";
 
 function Sidebar({ isActiveBurger }) {

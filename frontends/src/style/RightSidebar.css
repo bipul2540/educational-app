@@ -1,12 +1,15 @@
 .rightsidebar {
   position: fixed;
-  top: 10vh;
+  top: 8vh;
   right: 0;
-  min-height: 90vh;
+  min-height: 92vh;
   min-width: 340px;
+  z-index: 20;
   background-color: #f0f2f5;
-  overflow: scroll;
+  overflow-y: scroll;
   border-left: 0.2px solid #a2a2a2;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 @media screen and (max-width: 1500px) {
@@ -43,19 +46,39 @@
   }
 }
 
+.rightsidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 80px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.rightsidebar::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.rightsidebar::-webkit-scrollbar-thumb:hover {
+  background: #989898;
+}
+
+.rightsidebar::-webkit-scrollbar-track {
+  height: 20px;
+  cursor: pointer;
+}
+
 .rightsidebar .rightsidebar__container {
-  width: 90%;
+  width: 93%;
   margin: auto;
+  margin-top: 4vh;
 }
 
 .rightsidebar .rightsidebar__container .rightsidebar__header {
   font-size: 0.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-top: 20px;
+  width: 70%;
+  text-transform: capitalize;
 }
 
 .rightsidebar .rightsidebar__container .rightsidebar__header h2 {
@@ -94,20 +117,11 @@
 }
 
 .rightsidebar__content li a .rightside__icon img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-}
-
-.rightsidebar__content li a .rightside__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .rightsidebar__content li a .rightside__title span {

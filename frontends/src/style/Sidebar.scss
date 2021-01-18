@@ -2,11 +2,12 @@
   position: fixed;
   min-width: 340px;
   top: 8vh;
-  height: 92vh;
+  min-height: 92vh;
   z-index: 20;
   overflow-y: scroll;
   transition: all ease 0.3s;
   background-color: #f0f2f5;
+  border-right: 1px solid grey;
 
   @media screen and (max-width: 968px) {
     transform: translateX(-100%);
@@ -73,6 +74,7 @@
       img {
         width: 35px;
         height: 35px;
+        object-fit: cover;
       }
     }
     .content__title {

@@ -2,12 +2,13 @@
   position: fixed;
   min-width: 340px;
   top: 8vh;
-  height: 92vh;
+  min-height: 92vh;
   z-index: 20;
   overflow-y: scroll;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   background-color: #f0f2f5;
+  border-right: 1px solid grey;
   /* Optional: show position indicator in red */
 }
 
@@ -88,6 +89,8 @@
 .sidebar__links li .content__icon img {
   width: 35px;
   height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .sidebar__links li .content__title {

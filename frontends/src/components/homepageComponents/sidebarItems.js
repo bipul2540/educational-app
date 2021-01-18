@@ -26,41 +26,6 @@ const items = [
     img: "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png",
     title: "Posts",
   },
-  {
-    id: 6,
-    img: "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png",
-    title: "Posts",
-  },
-  {
-    id: 6,
-    img: "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png",
-    title: "Posts",
-  },
-  {
-    id: 6,
-    img: "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png",
-    title: "Posts",
-  },
-  {
-    id: 6,
-    img: "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png",
-    title: "Posts",
-  },
-  {
-    id: 6,
-    img: "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png",
-    title: "Posts",
-  },
-  {
-    id: 6,
-    img: "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png",
-    title: "Posts",
-  },
-  {
-    id: 6,
-    img: "https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/QAyfjudAqqG.png",
-    title: "Posts",
-  },
 ];
 
 export default items;

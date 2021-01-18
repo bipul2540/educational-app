@@ -32,7 +32,7 @@ function UsersCard() {
         </div>
         <div className="card__buttons">
           <button>
-            <i class="fas fa-comment"></i>
+            <i className="fas fa-comment"></i>
             Answer
           </button>
           <button>
@@ -40,7 +40,7 @@ function UsersCard() {
             review
           </button>
           <button>
-            <i class="fas fa-share"></i>
+            <i className="fas fa-share"></i>
             Share
           </button>
         </div>
