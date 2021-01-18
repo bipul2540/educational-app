@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  z-index: 2;
+  z-index: 100;
   width: 100%;
   min-height: 8vh;
   background-color: white;

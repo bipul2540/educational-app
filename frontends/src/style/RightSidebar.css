@@ -1,0 +1,116 @@
+.rightsidebar {
+  position: fixed;
+  top: 10vh;
+  right: 0;
+  min-height: 90vh;
+  min-width: 340px;
+  background-color: #f0f2f5;
+  overflow: scroll;
+  border-left: 0.2px solid #a2a2a2;
+}
+
+@media screen and (max-width: 1500px) {
+  .rightsidebar {
+    min-width: 240px;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .rightsidebar {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .rightsidebar {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    min-width: 290px;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .rightsidebar {
+    min-width: 280px;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .rightsidebar {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.rightsidebar .rightsidebar__container {
+  width: 90%;
+  margin: auto;
+}
+
+.rightsidebar .rightsidebar__container .rightsidebar__header {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rightsidebar .rightsidebar__container .rightsidebar__header h2 {
+  color: #191919;
+}
+
+.rightsidebar__content {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.rightsidebar__content li a {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 14px;
+  border-radius: 20px;
+}
+
+.rightsidebar__content li a:hover {
+  background-color: #ebebeb;
+}
+
+.rightsidebar__content li a .rightside__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rightsidebar__content li a .rightside__icon img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.rightsidebar__content li a .rightside__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rightsidebar__content li a .rightside__title span {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=RightSidebar.css.map */

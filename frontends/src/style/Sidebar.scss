@@ -1,13 +1,15 @@
 .sidebar {
   position: fixed;
-  min-width: 350px;
+  min-width: 340px;
   top: 8vh;
   height: 92vh;
-  z-index: 1;
+  z-index: 20;
   overflow-y: scroll;
+  transition: all ease 0.3s;
+  background-color: #f0f2f5;
 
-  @media screen and (max-width: 768px) {
-    display: none;
+  @media screen and (max-width: 968px) {
+    transform: translateX(-100%);
   }
 
   &::-webkit-scrollbar {
@@ -91,7 +93,7 @@
   display: none;
   margin-left: 10px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 968px) {
     display: flex;
   }
 
@@ -123,5 +125,5 @@
 
 .sidebar__active {
   width: 100%;
-  display: block;
+  transform: translateX(0%);
 }

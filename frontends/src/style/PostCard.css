@@ -1,0 +1,103 @@
+.postcard {
+  position: absolute;
+  left: 350px;
+  top: 10vh;
+  min-width: 54%;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1240px) {
+  .postcard {
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .postcard {
+    width: 65%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .postcard {
+    width: 100%;
+  }
+}
+
+.postcard .postcard__container {
+  background-color: #ffffff;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px 8px;
+  -webkit-box-shadow: 0px 1px 2px #acacac;
+          box-shadow: 0px 1px 2px #acacac;
+}
+
+.user__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.user__card input {
+  width: 80%;
+  border-radius: 20px;
+  outline: none;
+  border: 0.4px solid grey;
+  padding: 0.4rem 1.2rem;
+  background-color: #f0f2f5;
+  color: #65676b;
+  font-size: 17px;
+}
+
+.card__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3px;
+  padding: 7px 26px;
+}
+
+.card__options a {
+  text-decoration: none;
+  color: black;
+  border: 0.1px solid #c4c4c4;
+  margin: 3px 8px;
+  border-radius: 20px;
+}
+
+.card__options a:hover {
+  background-color: #f0f2f5;
+}
+
+.card__options a .option__one,
+.card__options a .option__two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px 20px;
+}
+
+.card__options a .option__one span,
+.card__options a .option__two span {
+  margin-left: 4px;
+}
+
+.card__options a .option__one .option__icon,
+.card__options a .option__two .option__icon {
+  color: #667db6;
+}
+/*# sourceMappingURL=PostCard.css.map */

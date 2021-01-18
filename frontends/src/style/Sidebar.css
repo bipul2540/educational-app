@@ -1,16 +1,20 @@
 .sidebar {
   position: fixed;
-  min-width: 350px;
+  min-width: 340px;
   top: 8vh;
   height: 92vh;
-  z-index: 1;
+  z-index: 20;
   overflow-y: scroll;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  background-color: #f0f2f5;
   /* Optional: show position indicator in red */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   .sidebar {
-    display: none;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
 
@@ -104,7 +108,7 @@
   margin-left: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   .burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -146,6 +150,7 @@
 
 .sidebar__active {
   width: 100%;
-  display: block;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 /*# sourceMappingURL=Sidebar.css.map */
