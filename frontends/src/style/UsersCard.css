@@ -1,0 +1,102 @@
+.userscard {
+  position: absolute;
+  left: 350px;
+  top: 28vh;
+  min-width: 54%;
+  z-index: 10;
+  max-width: 820px;
+}
+
+@media screen and (max-width: 1240px) {
+  .userscard {
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .userscard {
+    width: 65%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .userscard {
+    width: 100%;
+  }
+}
+
+.userscard .card__container {
+  background-color: #ffffff;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px 18px;
+  -webkit-box-shadow: 0px 1px 2px #acacac;
+          box-shadow: 0px 1px 2px #acacac;
+}
+
+.persons__logo__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
+}
+
+.persons__logo__header p {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__question__data {
+  margin-top: 20px;
+}
+
+.card__question__data .question_explanation p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.card__buttons {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card__buttons button {
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  font-size: 1.05rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #65676b;
+  cursor: pointer;
+}
+
+.card__buttons button i,
+.card__buttons button .rate {
+  margin-right: 5px;
+}
+
+.card__buttons button:hover {
+  background-color: #d5d5d5;
+}
+/*# sourceMappingURL=UsersCard.css.map */
