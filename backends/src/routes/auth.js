@@ -28,7 +28,25 @@ router.post("/register", async (req, res) => {
 router.get("/users/get", async (req, res) => {
   try {
     const user = await User.find().select({ fname: 1 });
-    res.status(400).send(user);
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
+// GET USERS DATA FROM EAMILID
+
+router.get("/user/get/:email", async (req, res) => {
+  try {
+    const email = req.params.email;
+    const user = await User.findOne({ email: email });
+    res
+      .status(200)
+      .send({
+        fname: user.fname,
+        lname: user.lname,
+        profession: user.profession,
+      });
   } catch (error) {
     res.status(400).send(error);
   }

@@ -23,24 +23,20 @@ function Login({ authenticated, setAuthenticated }) {
   useEffect(() => {
     // fetchApi();
     storeCollector();
-    console.log("I AM FROM useEffect");
   }, []);
   const storeCollector = () => {
     const store = JSON.parse(localStorage.getItem("login"));
     if (store && store.authenticated && store.token) {
       setAuthenticated(store.authenticated);
-      console.log("authe from store", authenticated);
     }
   };
   const fetchApi = async (text) => {
-    console.log("fetch run");
     try {
       const response = await axios.post("/api/v1/new/user/login", text);
       const result = await response.data;
       console.log(result);
       if (!result) {
         setAuthenticated(false);
-        console.log("authe from fetch", authenticated);
       }
 
       localStorage.setItem(
@@ -56,6 +52,24 @@ function Login({ authenticated, setAuthenticated }) {
     }
   };
 
+  const fetchUserData = async () => {
+    try {
+      const response = await axios.get(`/api/v1/new/user/get/${text.email}`);
+      const userdata = response.data;
+      console.log("userdata is", userdata);
+      localStorage.setItem(
+        "userdata",
+        JSON.stringify({
+          fname: userdata.fname,
+          lname: userdata.lname,
+          profession: userdata.profession,
+        })
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setText({ ...text, [name]: value });
@@ -63,8 +77,8 @@ function Login({ authenticated, setAuthenticated }) {
 
   const loginHandler = (e) => {
     e.preventDefault();
-    console.log("TEXT", text);
     fetchApi(text);
+    fetchUserData();
     setText({
       email: "",
       password: "",

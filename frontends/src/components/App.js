@@ -7,7 +7,6 @@ import User from "./Homepage";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
-  console.log(" authe from app", authenticated);
   return (
     <div>
       <Switch>

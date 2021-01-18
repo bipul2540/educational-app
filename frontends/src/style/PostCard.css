@@ -1,7 +1,7 @@
 .postcard {
   position: absolute;
   left: 350px;
-  top: 10vh;
+  top: 65px;
   min-width: 54%;
   max-width: 820px;
   z-index: 10;

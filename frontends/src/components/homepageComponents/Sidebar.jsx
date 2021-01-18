@@ -3,7 +3,7 @@ import "./../../style/Sidebar.css";
 import { Avatar, Link } from "@material-ui/core";
 import items from "./sidebarItems";
 
-function Sidebar({ isActiveBurger }) {
+function Sidebar({ isActiveBurger, userdata }) {
   return (
     <div className={isActiveBurger ? "sidebar sidebar__active" : "sidebar"}>
       <div className="sidebar__container">
@@ -12,7 +12,9 @@ function Sidebar({ isActiveBurger }) {
             <Avatar src="https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg" />
           </div>
           <div className="content__title">
-            <span>Bipul kumar</span>
+            <span>
+              {userdata.fname} {userdata.lname}
+            </span>
           </div>
         </div>
         <ul className="sidebar__links">
