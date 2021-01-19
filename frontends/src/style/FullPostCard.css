@@ -1,0 +1,11 @@
+.fullpostcard {
+  position: absolute;
+  z-index: 200;
+  top: 10vh;
+  left: 0;
+  width: 200%;
+  height: 100vh;
+  border: 1px solid red;
+  overflow: hidden;
+}
+/*# sourceMappingURL=FullPostCard.css.map */

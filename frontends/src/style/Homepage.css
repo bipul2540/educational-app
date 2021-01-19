@@ -5,11 +5,17 @@
 }
 body {
   background-color: #f0f2f5;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .homepage__of__middle {
   background-color: #f0f2f5;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* @media screen and (max-width: 500) {

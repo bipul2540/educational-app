@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Avatar } from "@material-ui/core";
 import CodeIcon from "@material-ui/icons/Code";
 import ImageIcon from "@material-ui/icons/Image";
 import "./../../style/PostCard.css";
 import { Link } from "react-router-dom";
+import FullPostCard from "./FullPostCard";
 
 function PostCard() {
   return (
