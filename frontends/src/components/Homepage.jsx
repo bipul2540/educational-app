@@ -7,16 +7,22 @@ import "./../style/Homepage.css";
 import "./../style/Homepage.css";
 import AllCards from "./homepageComponents/AllCards";
 import Chatpage from "./homepageComponents/Chatpage";
+import SettingPage from "./homepageComponents/SettingPage";
 
 function Homepage() {
   const [isActiveBurger, setActiveBurger] = useState(false);
   const [ischatpageActive, setChatpageActive] = useState(false);
+  const [issettinpageActive, setSettingpageActive] = useState(false);
   const [person, setPerson] = useState([]);
 
   useEffect(() => {}, []);
 
   const userdata = JSON.parse(localStorage.getItem("userdata"));
   console.log("ths is home page", userdata.fname);
+
+  const removePopup = () => {
+    setSettingpageActive(false);
+  };
 
   return (
     <div className="homepage__of__middle">
@@ -25,14 +31,14 @@ function Homepage() {
         setActiveBurger={setActiveBurger}
         ischatpageActive={ischatpageActive}
         setChatpageActive={setChatpageActive}
+        issettinpageActive={issettinpageActive}
+        setSettingpageActive={setSettingpageActive}
       />
       <Sidebar isActiveBurger={isActiveBurger} userdata={userdata} />
-      {/**<PostCard /> */}
-      <AllCards />
-
+      <AllCards onClick={removePopup} />
       <RightSidebar />
-      {/**<Chatpage ischatpageActive={ischatpageActive} /> */}
       <Chatpage ischatpageActive={ischatpageActive} />
+      <SettingPage issettinpageActive={issettinpageActive} />
     </div>
   );
 }

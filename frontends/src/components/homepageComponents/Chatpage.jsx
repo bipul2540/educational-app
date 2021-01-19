@@ -5,6 +5,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SendIcon from "@material-ui/icons/Send";
 import axios from "./../../axios";
 import ChatSideUser from "./ChatSideUser";
+import { Link, Route } from "react-router-dom";
 
 function Chatpage({ ischatpageActive }) {
   const [formValue, setValue] = useState({
@@ -47,24 +48,47 @@ function Chatpage({ ischatpageActive }) {
       className={ischatpageActive ? "chatpage chatpage__active" : "chatpage"}
     >
       <div className="chatpage__container">
+        {/** THIS IS LEFT PANEL */}
         <div className="chatpage__left__panel">
           <div className="left__panel__header">
             <div className="user__header__imafge">
               <Avatar />
             </div>
-            <div className="Friends__box">
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-            </div>
+          </div>
+          <div className="left__panel__option">
+            <ul className="left__links">
+              <li className="left__link">
+                <Link to="#" className="link active">
+                  Chats
+                </Link>
+              </li>
+              <li className="left__link">
+                <Link to="#">Friends</Link>
+              </li>
+              <li className="left__link">
+                <Link to="#">Active</Link>
+              </li>
+              <li className="left__link">
+                <Link to="#">Groups</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="Friends__box">
+            <ChatSideUser />
+            <ChatSideUser />
+            <ChatSideUser />
           </div>
         </div>
+
+        {/** THIS IS RIGHT PANEL */}
         <div className="chatpage__right__panel">
           <div className="chatpage__right__header">
             <div className="user__status__bar">
               <Avatar />
               <div className="user__status">
-                <p>Bipul kumar</p>
+                <p>
+                  <strong>Bipul kumar</strong>
+                </p>
                 <small>last active...5min ago</small>
               </div>
             </div>
@@ -75,35 +99,14 @@ function Chatpage({ ischatpageActive }) {
             </div>
           </div>
           <div className="chatbox">
-            <div className="chats">
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-              <h1>message</h1>
-            </div>
+            <p className="message__box">
+              this is message
+              <span>4:45:5 am mon</span>
+            </p>
+            <p className="message__box message__send">
+              this is message
+              <span>4:45:5 am mon</span>
+            </p>
           </div>
 
           <div className="chatpage__footer">

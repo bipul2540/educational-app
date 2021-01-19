@@ -111,6 +111,14 @@
   height: 40px;
 }
 
+.nav__right__panel .rihgt__icon__buttton:active {
+  background-color: #d8d6d6;
+}
+
+.nav__right__panel .rihgt__icon__buttton:hover {
+  background-color: #e4e6eb;
+}
+
 @media screen and (max-width: 500px) {
   .nav__right__panel .rihgt__icon__buttton {
     width: 30px;
@@ -126,5 +134,13 @@
   .nav__right__panel .rihgt__icon__buttton .nav__icon {
     font-size: 1.2rem;
   }
+}
+
+.nav__right__panel .settingIcon__active {
+  background-color: #bdbdbd;
+}
+
+.nav__right__panel .settingIcon__active:hover {
+  background-color: #bdbdbd;
 }
 /*# sourceMappingURL=Navbar.css.map */

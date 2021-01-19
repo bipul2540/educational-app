@@ -6,6 +6,7 @@ import ChatIcon from "@material-ui/icons/Chat";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import MenuIcon from "@material-ui/icons/Menu";
+import SettingsIcon from "@material-ui/icons/Settings";
 import "./../../style/Navbar.css";
 
 function Navbar({
@@ -13,6 +14,8 @@ function Navbar({
   setActiveBurger,
   ischatpageActive,
   setChatpageActive,
+  issettinpageActive,
+  setSettingpageActive,
 }) {
   const burgerHandler = () => {
     setActiveBurger(!isActiveBurger);
@@ -20,6 +23,10 @@ function Navbar({
 
   const handleChatPage = () => {
     setChatpageActive(!ischatpageActive);
+  };
+
+  const handleSettings = () => {
+    setSettingpageActive(!issettinpageActive);
   };
 
   return (
@@ -65,6 +72,16 @@ function Navbar({
           </IconButton>
           <IconButton className="rihgt__icon__buttton">
             <ArrowDropDownIcon className="nav__icon" />
+          </IconButton>
+          <IconButton
+            className={
+              issettinpageActive
+                ? "rihgt__icon__buttton settingIcon__active"
+                : "rihgt__icon__buttton"
+            }
+            onClick={handleSettings}
+          >
+            <SettingsIcon className="nav__icon" />
           </IconButton>
         </div>
       </div>
