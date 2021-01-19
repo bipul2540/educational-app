@@ -1,34 +1,35 @@
 .chatpage {
+  position: absolute;
+  z-index: 55555;
+  top: 62px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  z-index: 55555;
-  width: 78%;
-  top: 60px;
-  right: 0%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
   min-height: 92vh;
-  background-color: #ffffff;
-  display: none;
+  max-height: 92vh;
+  background-color: white;
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
 }
 
-@media screen and (max-width: 1200px) {
-  .chatpage {
-    width: 100%;
-  }
-}
-
-.chatpage__active {
-  display: block;
-}
-
-.chatpage__container {
+.chatpage .chatpage__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 98%;
   margin: auto;
-  height: 90vh;
+  min-height: 92vh;
+  max-height: 92vh;
+}
+
+.chatpage__active {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 .chatpage__left__panel {
@@ -48,26 +49,19 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #f0efeb;
+  border: 1px solid grey;
 }
 
 .chatpage__right__panel .chatpage__right__header {
-  position: -webkit-sticky;
-  position: sticky;
-  -webkit-box-flex: 0.1;
-      -ms-flex: 0.1;
-          flex: 0.1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 10px;
-  padding: 10px 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid grey;
 }
 
@@ -75,96 +69,49 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: black;
 }
 
 .chatpage__right__panel .chatpage__right__header .user__status__bar .user__status {
-  margin-left: 10px;
-}
-
-.chatpage__right__panel .chatpage__right__header .user__status__bar .user__status small {
-  font-size: 0.7rem;
-}
-
-.chatpage__right__panel .userinfo .userinfo__button {
-  width: 40px;
-  height: 40px;
-  color: black;
+  margin-left: 20px;
 }
 
 .chatbox {
-  -webkit-box-flex: 0.8;
-      -ms-flex: 0.8;
-          flex: 0.8;
-  position: fixed;
-  top: 19vh;
-  height: 72vh;
-  width: 45.7%;
-  border-radius: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-size: 100%;
   overflow-y: scroll;
 }
 
 .chatbox::-webkit-scrollbar {
-  display: none;
-}
-
-.chatbox .chats {
-  margin-top: 10px;
-}
-
-.chatbox .chats .sender__chats {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 40%;
-}
-
-.chatbox .chats .sender__chats p {
-  border: 0.1px solid #9b9b9b;
-  color: #4c4c4c;
-  display: inline-block;
-  padding: 4px 20px;
-  border-radius: 10px;
-  background-color: #c9c9c9;
-  margin-top: 20px;
 }
 
 .chatpage__footer {
-  position: fixed;
-  top: 92vh;
-  width: 60%;
-  -webkit-box-flex: 0.1;
-      -ms-flex: 0.1;
-          flex: 0.1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid #cecece;
-  border-radius: 10px;
+  border-top: 1px solid grey;
+  margin-bottom: 3px;
 }
 
 .chatpage__footer form {
+  padding: 10px 20px;
+  width: 100%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  padding: 0px 20px;
 }
 
 .chatpage__footer form input {
-  width: 50%;
-  height: 2rem;
+  width: 60%;
+  padding: 10px 20px;
+  background-color: #f0f2f5;
   border-radius: 20px;
+  border: 1px solid grey;
   outline: none;
-  border: 1px solid #828282;
-  padding: 10px 15px;
   font-weight: bold;
 }
 /*# sourceMappingURL=ChatPage.css.map */
