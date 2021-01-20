@@ -6,11 +6,16 @@ import SendIcon from "@material-ui/icons/Send";
 import axios from "./../../axios";
 import ChatSideUser from "./ChatSideUser";
 import { Link, Route } from "react-router-dom";
+import Friends from "./Friends";
+import ActiveFriends from "./ActiveFriends";
+import Groups from "./Groups";
 
 function Chatpage({ ischatpageActive }) {
   const [formValue, setValue] = useState({
     msg: "",
   });
+
+  const [text, setText] = useState("Chats");
 
   useEffect(() => {
     getMessages();
@@ -42,6 +47,12 @@ function Chatpage({ ischatpageActive }) {
     const { name, value } = e.target;
     setValue({ ...formValue, [name]: value });
   };
+
+  const showtext = (e) => {
+    console.log(e.target.innerText);
+    setText(e.target.innerText);
+  };
+
   return (
     <div
       // className="chatpage"
@@ -56,7 +67,7 @@ function Chatpage({ ischatpageActive }) {
             </div>
           </div>
           <div className="left__panel__option">
-            <ul className="left__links">
+            <ul className="left__links" onClick={showtext}>
               <li className="left__link">
                 <Link to="#" className="link active">
                   Chats
@@ -73,11 +84,51 @@ function Chatpage({ ischatpageActive }) {
               </li>
             </ul>
           </div>
-          <div className="Friends__box">
-            <ChatSideUser />
-            <ChatSideUser />
-            <ChatSideUser />
-          </div>
+
+          {text === "Chats" ? (
+            <div className="Friends__box">
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+              <ChatSideUser />
+            </div>
+          ) : (
+            ""
+          )}
+          {text === "Friends" ? (
+            <div className="Friends__box">
+              <Friends />
+            </div>
+          ) : (
+            ""
+          )}
+
+          {text === "Active" ? (
+            <div className="Friends__box">
+              <ActiveFriends />
+            </div>
+          ) : (
+            ""
+          )}
+          {text === "Groups" ? (
+            <div className="Friends__box">
+              <Groups />
+            </div>
+          ) : (
+            ""
+          )}
         </div>
 
         {/** THIS IS RIGHT PANEL */}

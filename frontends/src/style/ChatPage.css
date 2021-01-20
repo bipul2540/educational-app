@@ -59,7 +59,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px 4px;
+  padding: 6px 4px;
+  overflow-y: scroll;
+  max-height: 81vh;
+  min-height: 81vh;
+}
+
+.chatpage__left__panel .Friends__box::-webkit-scrollbar {
+  display: none;
 }
 
 .left__panel__option {
@@ -78,6 +85,20 @@
           justify-content: space-between;
 }
 
+.left__panel__option .left__links .left__link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.left__panel__option .left__links .left__link:hover {
+  border-bottom: 1px solid #58589a;
+}
+
 .left__panel__option .left__links .left__link a {
   text-decoration: none;
   color: black;
@@ -89,14 +110,6 @@
   .left__panel__option .left__links .left__link a {
     font-size: 14px;
   }
-}
-
-.left__panel__option .left__links .left__link a:hover {
-  border-bottom: 2px solid #58589a;
-}
-
-.left__panel__option .left__links .active {
-  border-bottom: 2px solid #58589a;
 }
 
 .chatpage__right__panel {

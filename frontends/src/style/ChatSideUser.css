@@ -5,9 +5,10 @@
 .chat__user__container {
   display: flex;
   width: 100%;
-  padding: 10px 10px;
+  padding: 5px 10px;
   align-items: center;
   cursor: pointer;
+  margin-top: 14px;
   border-radius: 20px;
 }
 
@@ -16,8 +17,8 @@
 }
 
 .friends__logo {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgb(241, 241, 241);
@@ -30,6 +31,12 @@
 }
 .sidebar__chatinfo h2 {
   font-size: 1.1rem;
+}
+
+@media screen and (max-width: 668px) {
+  .sidebar__chatinfo h2 {
+    font-size: 0.9rem;
+  }
 }
 
 .sidebar__chatinfo p {
