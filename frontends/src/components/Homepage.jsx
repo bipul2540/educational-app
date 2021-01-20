@@ -8,12 +8,14 @@ import "./../style/Homepage.css";
 import AllCards from "./homepageComponents/AllCards";
 import Chatpage from "./homepageComponents/Chatpage";
 import SettingPage from "./homepageComponents/SettingPage";
+import FullPostCard from "./homepageComponents/FullPostCard";
 
 function Homepage() {
   const [isActiveBurger, setActiveBurger] = useState(false);
   const [ischatpageActive, setChatpageActive] = useState(false);
   const [issettinpageActive, setSettingpageActive] = useState(false);
   const [person, setPerson] = useState([]);
+  const [isfullpagepost, setFullPagePost] = useState(false);
 
   useEffect(() => {}, []);
 
@@ -35,7 +37,15 @@ function Homepage() {
         setSettingpageActive={setSettingpageActive}
       />
       <Sidebar isActiveBurger={isActiveBurger} userdata={userdata} />
-      <AllCards onClick={removePopup} />
+      <AllCards
+        onClick={removePopup}
+        isfullpagepost={isfullpagepost}
+        setFullPagePost={setFullPagePost}
+      />
+      <FullPostCard
+        isfullpagepost={isfullpagepost}
+        setFullPagePost={setFullPagePost}
+      />
       <RightSidebar />
       <Chatpage ischatpageActive={ischatpageActive} />
       <SettingPage issettinpageActive={issettinpageActive} />

@@ -6,7 +6,11 @@ import "./../../style/PostCard.css";
 import { Link } from "react-router-dom";
 import FullPostCard from "./FullPostCard";
 
-function PostCard() {
+function PostCard({ isfullpagepost, setFullPagePost }) {
+  const openFullpagePost = () => {
+    setFullPagePost(!isfullpagepost);
+  };
+
   return (
     <div className="postcard">
       <div className="postcard__container">
@@ -15,7 +19,12 @@ function PostCard() {
             className="card__user__icon"
             src="https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg"
           />
-          <input type="text" placeholder="Enter your question ?" />
+          <input
+            type="text"
+            placeholder="Enter your question ?"
+            onClick={openFullpagePost}
+            readOnly="readonly"
+          />
         </div>
         <div className="card__options">
           <Link to="#">

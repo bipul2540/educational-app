@@ -2,6 +2,7 @@ import { Avatar } from "@material-ui/core";
 import React from "react";
 import "./../../style/UsersCard.css";
 import RateReviewIcon from "@material-ui/icons/RateReview";
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 function UsersCard() {
   return (
@@ -11,6 +12,7 @@ function UsersCard() {
           <Avatar />
           <p>
             <strong>Rahul kumar</strong>
+            <small>5 min</small>
             <span> category: javascript, reactjs</span>
           </p>
         </div>

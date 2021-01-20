@@ -31,6 +31,7 @@
   background-color: #f0f2f5;
   color: #65676b;
   font-size: 17px;
+  cursor: pointer;
 }
 
 .card__options {

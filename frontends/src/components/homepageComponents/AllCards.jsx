@@ -3,11 +3,14 @@ import "./../../style/AllCards.css";
 import PostCard from "./PostCard";
 import UsersCard from "./UsersCard";
 
-function AllCards() {
+function AllCards({ isfullpagepost, setFullPagePost }) {
   return (
     <div className="all__cards">
       <div className="all__cards__container">
-        <PostCard />
+        <PostCard
+          isfullpagepost={isfullpagepost}
+          setFullPagePost={setFullPagePost}
+        />
         <UsersCard />
         <UsersCard />
         <UsersCard />

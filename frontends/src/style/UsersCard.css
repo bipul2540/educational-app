@@ -1,7 +1,7 @@
 .userscard {
   width: 92%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .userscard .card__container {
@@ -31,6 +31,10 @@
           flex-direction: column;
 }
 
+.persons__logo__header p small {
+  font-size: 13px;
+}
+
 .card__question__data {
   margin-top: 20px;
 }
@@ -51,7 +55,7 @@
 }
 
 .card__buttons button {
-  padding: 0.5rem 1.1rem;
+  padding: 0.3rem 1rem;
   border-radius: 20px;
   background-color: transparent;
   border: none;

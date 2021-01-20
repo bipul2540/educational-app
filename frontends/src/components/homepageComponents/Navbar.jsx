@@ -64,6 +64,7 @@ function Navbar({
           <IconButton className="rihgt__icon__buttton">
             <AddIcon className="nav__icon" />
           </IconButton>
+
           <IconButton className="rihgt__icon__buttton" onClick={handleChatPage}>
             <ChatIcon className="nav__icon" />
           </IconButton>
