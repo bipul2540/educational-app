@@ -22,11 +22,10 @@ const postSchema = new mongoose.Schema({
   },
 
   image: {
-    type: Buffer,
-    contentType: String,
+    type: String,
   },
 
-  data: {
+  date: {
     type: Date,
     default: Date.now,
   },

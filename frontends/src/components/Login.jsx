@@ -63,6 +63,7 @@ function Login({ authenticated, setAuthenticated }) {
           fname: userdata.fname,
           lname: userdata.lname,
           profession: userdata.profession,
+          email: userdata.email,
         })
       );
     } catch (error) {

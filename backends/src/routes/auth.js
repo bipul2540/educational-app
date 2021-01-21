@@ -40,13 +40,12 @@ router.get("/user/get/:email", async (req, res) => {
   try {
     const email = req.params.email;
     const user = await User.findOne({ email: email });
-    res
-      .status(200)
-      .send({
-        fname: user.fname,
-        lname: user.lname,
-        profession: user.profession,
-      });
+    res.status(200).send({
+      fname: user.fname,
+      lname: user.lname,
+      profession: user.profession,
+      email: user.email,
+    });
   } catch (error) {
     res.status(400).send(error);
   }

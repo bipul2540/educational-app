@@ -1,37 +1,36 @@
 import { Avatar } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./../../style/UsersCard.css";
 import RateReviewIcon from "@material-ui/icons/RateReview";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
-function UsersCard() {
+function UsersCard({ username, title, content, image }) {
   return (
     <div className="userscard">
       <div className="card__container">
         <div className="persons__logo__header">
           <Avatar />
           <p>
-            <strong>Rahul kumar</strong>
+            <strong>{username}</strong>
             <small>5 min</small>
             <span> category: javascript, reactjs</span>
           </p>
         </div>
         <div className="card__question__data">
           <div className="question">
-            <h5>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-              fuga.?
-            </h5>
+            <h5>{title}</h5>
           </div>
           <div className="question_explanation">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis eligendi velit repellendus voluptates ullam alias
-              minus, harum laboriosam. Mollitia nesciunt distinctio laudantium
-              iure enim rerum harum facere explicabo, animi suscipit.
-            </p>
+            <p>{content}</p>
           </div>
         </div>
+        {image ? (
+          <div className="question__image">
+            <img src={image} alt="ques" />
+          </div>
+        ) : (
+          ""
+        )}
         <div className="card__buttons">
           <button>
             <i className="fas fa-comment"></i>
