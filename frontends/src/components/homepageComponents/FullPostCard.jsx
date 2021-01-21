@@ -52,12 +52,15 @@ function FullPostCard({ isfullpagepost, setFullPagePost }) {
     console.log(fileimage);
     console.log(localStateValue);
     fectchData();
-    setPostForm({
-      title: "",
-      content: "",
-    });
-    setFileimage({ image: "" });
-    setFullPagePost(false);
+
+    setTimeout(() => {
+      setFullPagePost(false);
+      setPostForm({
+        title: "",
+        content: "",
+      });
+      setFileimage({ image: "" });
+    }, 1000);
   };
 
   if (isfullpagepost) {

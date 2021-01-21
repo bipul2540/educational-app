@@ -7,7 +7,7 @@
   z-index: 10;
   padding: 10px;
   overflow-y: scroll;
-  height: 92vh;
+  height: 94.4vh;
 }
 
 .all__cards::-webkit-scrollbar {
@@ -37,4 +37,27 @@
   .all__cards {
     width: 100%;
   }
+}
+
+.movetoTop {
+  position: fixed;
+  bottom: 1vh;
+  right: 0;
+  /* border: 1px solid red; */
+}
+
+.movetoTop .movetop__button {
+  background: rgb(179, 179, 179);
+  color: rgb(47, 53, 76);
+  width: 30px;
+  height: 30px;
+}
+.movetoTop .movetop__button:hover {
+  background: rgb(179, 179, 179);
+}
+
+.loading__gif {
+  width: 40px;
+  height: 40px;
+  border: 2px solid red;
 }
