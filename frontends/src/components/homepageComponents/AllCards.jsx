@@ -56,8 +56,8 @@ function AllCards({ isfullpagepost, setFullPagePost }) {
     );
   } else {
     return (
-      <div className="all__cards">
-        <div className="all__cards__container">
+      <div className="all__cards2">
+        <div className="all__cards__container2">
           <img
             src="https://i.gifer.com/4V0b.gif"
             alt=""

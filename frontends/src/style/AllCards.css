@@ -56,8 +56,19 @@
   background: rgb(179, 179, 179);
 }
 
+.all__cards2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all__cards2 .all__cards__container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .loading__gif {
-  width: 40px;
-  height: 40px;
-  border: 2px solid red;
+  width: 80px;
+  height: 80px;
+  margin-top: 30vh;
 }

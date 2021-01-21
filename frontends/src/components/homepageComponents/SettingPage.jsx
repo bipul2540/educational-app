@@ -22,7 +22,7 @@ function SettingPage({ issettinpageActive }) {
     >
       <ul className="setting__links">
         <li className="settings__link">
-          <Link to="#">
+          <Link to="/website/account">
             <AccountCircleIcon className="settings__icon" />
             <span>Account</span>
           </Link>
