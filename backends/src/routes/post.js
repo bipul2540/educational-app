@@ -34,17 +34,31 @@ const upload = multer({
 
 router.post("/user/posts", upload.single("image"), async (req, res) => {
   const url = req.protocol + "://" + req.get("host");
+  console.log(req.body);
+
   try {
-    const post = new Post({
-      username: req.body.username,
-      email: req.body.email,
-      title: req.body.title,
-      content: req.body.content,
-      image: url + "/public/" + req.file.filename,
-      date: req.body.date,
-    });
-    await post.save();
-    res.status(201).send(post);
+    if (req.file) {
+      const post = new Post({
+        username: req.body.username,
+        email: req.body.email,
+        title: req.body.title,
+        content: req.body.content,
+        image: url + "/public/" + req.file.filename,
+        date: req.body.date,
+      });
+      await post.save();
+      res.status(201).send(post);
+    } else {
+      const post = new Post({
+        username: req.body.username,
+        email: req.body.email,
+        title: req.body.title,
+        content: req.body.content,
+        date: req.body.date,
+      });
+      await post.save();
+      res.status(201).send(post);
+    }
   } catch (error) {
     res.status(500).send(error);
   }

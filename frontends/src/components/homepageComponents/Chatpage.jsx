@@ -5,7 +5,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SendIcon from "@material-ui/icons/Send";
 import axios from "./../../axios";
 import ChatSideUser from "./ChatSideUser";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Friends from "./Friends";
 import ActiveFriends from "./ActiveFriends";
 import Groups from "./Groups";

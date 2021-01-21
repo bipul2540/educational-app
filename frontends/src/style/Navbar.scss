@@ -87,7 +87,7 @@
       background-color: #e4e6eb;
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 540px) {
       width: 30px;
       height: 30px;
     }
@@ -95,7 +95,7 @@
     .nav__icon {
       color: #667db6;
 
-      @media screen and (max-width: 500px) {
+      @media screen and (max-width: 540px) {
         font-size: 1.2rem;
       }
     }

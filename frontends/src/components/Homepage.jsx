@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./homepageComponents/Navbar";
 import Sidebar from "./homepageComponents/Sidebar";
-import PostCard from "./homepageComponents/PostCard";
 import RightSidebar from "./homepageComponents/RightSidebar";
 import "./../style/Homepage.css";
 import "./../style/Homepage.css";
@@ -14,7 +13,6 @@ function Homepage() {
   const [isActiveBurger, setActiveBurger] = useState(false);
   const [ischatpageActive, setChatpageActive] = useState(false);
   const [issettinpageActive, setSettingpageActive] = useState(false);
-  const [person, setPerson] = useState([]);
   const [isfullpagepost, setFullPagePost] = useState(false);
 
   useEffect(() => {}, []);

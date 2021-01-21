@@ -119,7 +119,7 @@
   background-color: #e4e6eb;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
   .nav__right__panel .rihgt__icon__buttton {
     width: 30px;
     height: 30px;
@@ -130,7 +130,7 @@
   color: #667db6;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
   .nav__right__panel .rihgt__icon__buttton .nav__icon {
     font-size: 1.2rem;
   }
