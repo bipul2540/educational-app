@@ -6,6 +6,11 @@ const authRouter = require("./routes/auth");
 const messageRouter = require("./routes/message");
 const postRouter = require("./routes/post");
 
+const io = require("socket.io")(3100);
+
+// MODEL REQUIRE
+const Message = require("./models/Messages");
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -18,6 +23,17 @@ mongoose
   })
   .then(() => console.log("database is connected successfully...."))
   .catch((error) => console.log(error));
+
+// SOCKET PROGRAMMING
+// io.on("connection", (socket) => {
+//   Message.find()
+//     .sort({ cretedAt: -1 })
+//     .exec((err, message) => {
+//       if (err) return console.log(err);
+//     });
+// });
+
+// socket
 
 // MIDDLEWARES
 app.use(cors());
