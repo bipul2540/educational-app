@@ -1,5 +1,5 @@
 import { Avatar, IconButton } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./../../style/ChatPage.css";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import SendIcon from "@material-ui/icons/Send";
@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Friends from "./Friends";
 import ActiveFriends from "./ActiveFriends";
 import Groups from "./Groups";
+import { animateScroll } from "react-scroll";
 
 function Chatpage({ ischatpageActive }) {
   const [formValue, setValue] = useState({
@@ -16,14 +17,16 @@ function Chatpage({ ischatpageActive }) {
   });
 
   const [text, setText] = useState("Chats");
+  const [messages, setMessage] = useState([]);
+  const bottomRef = useRef();
 
   useEffect(() => {
     getMessages();
-  }, []);
-  const [messages, setMessage] = useState([]);
+  }, [formValue]);
   const fetchMessage = async () => {
     const response = await axios.post("/api/v1/user/sendmsg", {
       sendermsg: formValue.msg,
+      sender: true,
     });
     const data = response.data;
     console.log("chat data  is", data);
@@ -41,6 +44,9 @@ function Chatpage({ ischatpageActive }) {
     console.log(formValue);
     fetchMessage();
     getMessages();
+    setValue({
+      msg: "",
+    });
   };
 
   const valueChangeHandler = (e) => {
@@ -52,6 +58,18 @@ function Chatpage({ ischatpageActive }) {
     console.log(e.target.innerText);
     setText(e.target.innerText);
   };
+
+  const scrollToBottom = () => {
+    bottomRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [formValue]);
 
   return (
     <div
@@ -87,19 +105,6 @@ function Chatpage({ ischatpageActive }) {
 
           {text === "Chats" ? (
             <div className="Friends__box">
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
-              <ChatSideUser />
               <ChatSideUser />
               <ChatSideUser />
               <ChatSideUser />
@@ -149,15 +154,24 @@ function Chatpage({ ischatpageActive }) {
               </IconButton>
             </div>
           </div>
-          <div className="chatbox">
-            <p className="message__box">
-              this is message
-              <span>4:45:5 am mon</span>
-            </p>
-            <p className="message__box message__send">
-              this is message
-              <span>4:45:5 am mon</span>
-            </p>
+          <div className="chatbox" id="chatbox" ref={bottomRef}>
+            {messages.map((msg) => {
+              if (msg.sender === true) {
+                return (
+                  <p className="message__box message__send" key={msg._id}>
+                    {msg.sendermsg}
+                    <span>4:45:5 am mon</span>
+                  </p>
+                );
+              } else {
+                return (
+                  <p className="message__box" key={msg._id}>
+                    {msg.sendermsg}
+                    <span>4:45:5 am mon</span>
+                  </p>
+                );
+              }
+            })}
           </div>
 
           <div className="chatpage__footer">

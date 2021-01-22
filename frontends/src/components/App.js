@@ -8,6 +8,7 @@ import Account from "./AccountComponents/Account";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
+
   return (
     <div>
       <Switch>
@@ -30,7 +31,7 @@ function App() {
           <Redirect to="/login" />
         )}
 
-        <Route path="/website/account" component={Account} />
+        <Route path="/website/account/id=:userId" component={Account} />
       </Switch>
     </div>
   );

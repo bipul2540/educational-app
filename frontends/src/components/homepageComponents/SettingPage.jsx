@@ -12,6 +12,9 @@ function SettingPage({ issettinpageActive }) {
     window.location.reload();
   };
 
+  const login = JSON.parse(localStorage.getItem("login"));
+  const token = login.token.slice(10, 30);
+
   return (
     <div
       className={
@@ -22,7 +25,7 @@ function SettingPage({ issettinpageActive }) {
     >
       <ul className="setting__links">
         <li className="settings__link">
-          <Link to="/website/account">
+          <Link to={"/website/account/id=" + token} params={{ userId: token }}>
             <AccountCircleIcon className="settings__icon" />
             <span>Account</span>
           </Link>
