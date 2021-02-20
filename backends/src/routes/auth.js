@@ -68,7 +68,6 @@ router.post("/user/login", async (req, res) => {
   await res
     .header("auth-token", token)
     .send({ token: token, authentication: true });
-
   res.status(200).send("you have sucessufully loggedin........");
 });
 
